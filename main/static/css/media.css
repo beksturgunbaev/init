@@ -1,0 +1,294 @@
+@media screen and (max-width: 1200px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        max-width: 260px;
+        width: 100%;
+        height: 100%;
+        background-color: #444;
+        -webkit-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+    }
+    .menu.active {
+        left: 0;
+    }
+    .menu-cont {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+            -webkit-box-align: start !important;
+                -ms-flex-align: start !important;
+                    align-items: flex-start !important;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+    .menu--item {
+        margin: 10px 0;
+    }
+    .menu-logo {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 34px;    
+    }
+    .menu-logo img {
+        width: 70%;
+    }
+    .menu--item__link {
+        font-size: 20px;
+    }
+    .logo--cont span {
+        display: none;
+    }
+    .logo--cont img {
+        width: 55%;
+    }
+    .burger-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 36px;
+        cursor: pointer;
+    }
+    .burger-menu .burger-line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+    }
+    .content--title {
+        font-size: 32px;
+        text-transform: uppercase;
+    }
+    .content--desc {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+@media screen and (max-width: 991px) {
+    #particles-js,
+    #header {
+        height: 767px;
+    }
+    .content-img {
+        padding-top: 70px;
+    }
+    .name {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .info--txt {
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .info a {
+        font-size: 14px;
+    }
+    .prepods--slide,
+    .students--slide {
+        margin: 5px;
+    }
+    .contact--info {
+        padding: 30px 20px;
+    }
+    .contact--block {
+        margin: 15px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+           -webkit-box-pack: center;
+               -ms-flex-pack: center;
+                   justify-content: center;
+           -webkit-box-align: center;
+               -ms-flex-align: center;
+                   align-items: center;
+    }
+    .contact--title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .contact--container {
+        -webkit-box-pack: center !important;
+         -ms-flex-pack: center !important;
+             justify-content: center !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .about--img1 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .about--img2 {
+        order: 1;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .header--container .container {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 576px) {
+    .modal--content {
+        width: 400px;
+        height: 430px;
+        padding: 10px 30px;
+    }
+    .contact--info {
+        padding: 30px 10px 20px;
+        width: 100%;
+    }
+    .content--title {
+        font-size: 28px;
+    }
+    .get--info--btn {
+        margin-top: 20px;
+    }
+    .content-img {
+        padding-top: 50px;
+    }
+    .content {
+        padding-top: 150px;
+    }
+    .content--desc {
+        padding-top: 10px;
+    }
+    .logo--cont img {
+        width: 45%;
+    }
+    .students--container {
+        padding: 0 10px;
+    }
+    .students--container .slick-next {
+        right: -10px;
+    }
+    .students--container .slick-prev {
+        left: -10px;
+    }
+    table.blueTable tbody td:first-child {
+        width: 48px !important;
+    }
+    .map iframe {
+        height: 350px !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .modal--content {
+        width: 340px;
+        height: auto;
+        padding: 30px 30px 40px;
+    }
+    .modal--title {
+        padding: 20px 0;
+    }
+    .close--btn {
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        color: #000;
+    }
+    .form--btn {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .prepods--img img {
+        height: 240px;
+    }
+    .contact--block:nth-child(2n+1) {
+        padding-right: 5px;
+    }
+    .contact--block:nth-child(2n) {
+        padding-left: 5px;
+    }
+    .contact--info {
+        height: 230px;
+    }
+    .about--block {
+        padding: 0 30px;
+    }
+    .pading--top2 {
+        padding: 40px 15px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .contact--txt {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .contact--title {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .prepods--img img {
+        height: 200px;
+    }
+    .teacher--header {
+        -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+    }
+    .teacher--header .teacher--left {
+        width: 100%;
+    }
+    .teacher--header .teacher--right .teacher--txt {
+        padding-left: 0;
+        margin: 5px 0 10px;
+        line-height: 19px;
+    }
+    .teacher--header .teacher--right .teacher--txt-line-height {
+        line-height: 28px !important;
+    }
+    .teacher--header:first-child {
+        border-top: none;
+    }
+    #teacher {
+        padding: 100px 0 30px;
+    }
+    .teacher--img {
+        padding: 14px 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .logo--cont img {
+        width: 40%;
+    }
+    .contact--info {
+        padding: 20px 5px 20px;
+    }
+    table tbody tr td p {
+        font-size: 11px;
+        line-height: 11px;
+    }
+    .prepods--img img {
+        height: 190px;
+    }
+    .modal--content {
+        width: 300px;
+    }
+    .modal--title {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 332px) {
+    .news-link {
+        padding: 4px 28px;
+    }
+}
