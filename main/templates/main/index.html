@@ -4,15 +4,16 @@
 {% block title %} {{ title }} {% endblock %}
 
 
+
+
 {% block modal %}
     <div class="modal--form">
         <div class="modal--content">
             <div class="close--btn">&times;</div>
-            <form action="{% url 'feedback_view' %}" method="POST">
+            <form method="post">
                 {% csrf_token %}
                 <h2 class="modal--title">Оставьте свои контакты<br/>мы перезвоним</h2>
                 <div>
-                    {{form}}
                     <p class="modal--txt">Ваше имя:</p>
                     <input name="" class="modal--input" type="text" placeholder="Введите ваше имя" required>
                 </div>
@@ -29,6 +30,11 @@
         </form>
     </div>
 {% endblock %}
+
+
+
+
+
 
 {% block particles %}<div id="particles-js"></div>{% endblock %}
 

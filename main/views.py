@@ -16,3 +16,4 @@ def teachers(request):
     teachers = TeachersDetail.objects.order_by('-id')
     return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers})
 
+
