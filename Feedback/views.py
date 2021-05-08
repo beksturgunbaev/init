@@ -8,4 +8,3 @@ class FeedBackView(View):
         if form.is_valid():
             form.save()
         return redirect('/')
-# 
