@@ -1,3 +1,4 @@
+
 from django.db import models
 
 class News(models.Model):
@@ -69,3 +70,15 @@ class Contacts(models.Model):
     class Meta:
         verbose_name = 'Контактные данные'
         verbose_name_plural = 'Контакты'
+
+class Feed(models.Model):
+    feedName = models.CharField('Имя', max_length=70)
+    feedPhone = models.CharField('Телефон', max_length=13)
+    feedEmail = models.CharField('Почта', max_length=70)
+
+    def __str__(self):
+        return self.feedName
+
+    class Meta:
+        verbose_name = 'Заявка на обратный звонок'
+        verbose_name_plural = 'Заявки на обратный звонок'

@@ -12,18 +12,19 @@
             <div class="close--btn">&times;</div>
             <form method="post">
                 {% csrf_token %}
+
                 <h2 class="modal--title">Оставьте свои контакты<br/>мы перезвоним</h2>
                 <div>
                     <p class="modal--txt">Ваше имя:</p>
-                    <input name="" class="modal--input" type="text" placeholder="Введите ваше имя" required>
+                    {{ form.feedName }}
                 </div>
                 <div>
                     <p class="modal--txt">Ваш номер телефона</p>
-                    <input name="" class="modal--input" type="tel" placeholder="Введите ваш номер телефона" required>
+                    {{ form.feedPhone }}
                 </div>
                 <div>
                     <p class="modal--txt">Ваш e-mail</p>
-                    <input name="" class="modal--input" type="email" placeholder="Введите ваш e-mail" required>
+                    {{ form.feedEmail }}
                 </div>
                 <input type="submit" class="form--btn" value="Отправить"></input>
             </div>
