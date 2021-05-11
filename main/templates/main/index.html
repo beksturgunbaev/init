@@ -279,7 +279,7 @@
                     <div class="info">
                         <div class="name">{{ el.name }}</div>
                         <div class="info--txt">{{ el.position }}</div>
-                        <a href="{% url 'teachers' %}">Подробнее ...</a>
+                        <a href="{% url 'teachers' el.id %}">Подробнее ...</a>
                     </div>
                 </div>
             {% endfor %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import News, Contacts, Students, Teacher, TeachersDetail, Feed
+from .models import News, Contacts, Students, Teacher, Feed
 from .forms import feedForm
 
 def index(request):
@@ -24,8 +24,8 @@ def news(request):
     news = News.objects.order_by('-id')[:8]
     return render(request, 'main/news.html', {'headerTitle':'Последние новости', 'news': news})
     
-def teachers(request):
-    teachers = TeachersDetail.objects.order_by('-id')
+def teachers(request, pk):
+    teachers = Teacher.objects.filter(id=pk)
     return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers})
 
 

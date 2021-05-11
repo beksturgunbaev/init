@@ -14,28 +14,16 @@ class News(models.Model):
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
 
-class TeachersDetail(models.Model):
-    photo = models.ImageField('Добавить фото', null=True, blank=True, upload_to='teachers')
-    name = models.CharField('Ф.И.О', max_length=70)
-    position = models.CharField('Должность', max_length=300)
-    edu = models.CharField('Образоание', max_length=500)
-    experience = models.TextField('Трудовая деятельность')
-    certificates = models.CharField('Сертификаты', max_length=500)
-    publications = models.TextField('Публикации')
-    works = models.TextField('Основные работы')
-    contacts = models.CharField('Контакты', max_length=150)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = 'Преподваватель (подробнее)'
-        verbose_name_plural = 'Преподаватели (подробнее)'
-
 class Teacher(models.Model):
     photo = models.ImageField('Добавить фото', null=True, blank=True, upload_to='teachers')
-    name = models.CharField('Ф.И.О', max_length=70)
-    position = models.CharField('Должность', max_length=100)
+    name = models.CharField('Ф.И.О', max_length=70, null=True, blank=True)
+    position = models.CharField('Должность', max_length=100, null=True, blank=True)
+    edu = models.CharField('Образоание', max_length=500, null=True, blank=True)
+    experience = models.TextField('Трудовая деятельность', max_length=500, null=True, blank=True)
+    certificates = models.CharField('Сертификаты', max_length=500, null=True, blank=True)
+    publications = models.TextField('Публикации', max_length=500, null=True, blank=True)
+    works = models.TextField('Основные работы', max_length=500, null=True, blank=True)
+    contacts = models.CharField('Контакты', max_length=150, null=True, blank=True)
 
     def __str__(self):
         return self.name
