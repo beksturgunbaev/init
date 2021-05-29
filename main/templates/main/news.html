@@ -16,7 +16,7 @@
                                 <h3 class="news-title">{{ el.title }}</h3>
                                 <p class="news-desc">{{ el.description }}</p>
                                 <div class="d-flex justify-content-between align-items-end btn-date">
-                                    <a href="#" class="news-link">Подробнее</a>
+                                    <a href="{% url 'newsDetail' el.id %}" target="_blank" class="news-link">Подробнее</a>
                                     <div class="d-flex align-items-center">
                                         <span class="news-date">{{ el.date }}</span>
                                     </div>
@@ -31,3 +31,4 @@
         </div>
     </section>
 {% endblock %}
+

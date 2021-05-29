@@ -2,7 +2,7 @@
 from django.db import models
 
 class News(models.Model):
-    title = models.CharField('Заголовок', max_length=50)
+    title = models.CharField('Заголовок', max_length=2000)
     description = models.TextField('Полное описание')
     date = models.DateTimeField('Дата публикации')
     image = models.ImageField('Добавить фото', null=True, blank=True, upload_to='news')
@@ -16,14 +16,14 @@ class News(models.Model):
 
 class Teacher(models.Model):
     photo = models.ImageField('Добавить фото', null=True, blank=True, upload_to='teachers')
-    name = models.CharField('Ф.И.О', max_length=70, null=True, blank=True)
-    position = models.CharField('Должность', max_length=100, null=True, blank=True)
-    edu = models.CharField('Образоание', max_length=500, null=True, blank=True)
-    experience = models.TextField('Трудовая деятельность', max_length=500, null=True, blank=True)
-    certificates = models.CharField('Сертификаты', max_length=500, null=True, blank=True)
-    publications = models.TextField('Публикации', max_length=500, null=True, blank=True)
-    works = models.TextField('Основные работы', max_length=500, null=True, blank=True)
-    contacts = models.CharField('Контакты', max_length=150, null=True, blank=True)
+    name = models.CharField('Ф.И.О', max_length=700, null=True, blank=True)
+    position = models.TextField('Должность', max_length=5000, null=True, blank=True)
+    edu = models.TextField('Образоание', max_length=500, null=True, blank=True)
+    experience = models.TextField('Трудовая деятельность', max_length=5000, null=True, blank=True)
+    certificates = models.TextField('Сертификаты', max_length=5000, null=True, blank=True)
+    publications = models.TextField('Публикации', max_length=5000, null=True, blank=True)
+    works = models.TextField('Основные работы', max_length=5000, null=True, blank=True)
+    contacts = models.CharField('Контакты', max_length=1000, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -70,3 +70,5 @@ class Feed(models.Model):
     class Meta:
         verbose_name = 'Заявка на обратный звонок'
         verbose_name_plural = 'Заявки на обратный звонок'
+
+        

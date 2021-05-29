@@ -22,10 +22,17 @@ def index(request):
 
 def news(request):
     news = News.objects.order_by('-id')[:8]
-    return render(request, 'main/news.html', {'headerTitle':'Последние новости', 'news': news})
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/news.html', {'headerTitle':'Последние новости', 'news': news, 'contacts': contacts})
+
+def newsDetail(request, pk):
+    news = News.objects.filter(id=pk)
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/news-details.html', {'headerTitle':'Последние новости подробнее', 'news': news, 'contacts': contacts})
     
 def teachers(request, pk):
     teachers = Teacher.objects.filter(id=pk)
-    return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers})
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers, 'contacts': contacts})
 
 

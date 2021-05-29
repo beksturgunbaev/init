@@ -1,0 +1,33 @@
+{% extends 'main/main.html' %}
+
+{% block title %}
+    
+    {% for elTitle in teachers %}
+        {{ elTitle.name }} 
+    {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="news-detail">
+    <div class="container">
+        <h1 class="about--title">Последние новости</h3>
+        {% for el in news %}
+            <div class="news-detail-img col-lg-6 col-md-9 col-sm-12 col-12">
+                <img class="img-fluid" src="../../media/{{ el.image }}" alt="news">
+            </div>
+            <div class="news-detail-info">
+                <h2 class="news-detail-title">{{ el.title }}</h2>
+                <p class="news-detail-desc">{{ el.description }}</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-end">
+                <span class="news-date">{{ el.date }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,7 +1,12 @@
 {% extends 'main/main.html' %}
-{% load static %}
 
-{% block title %} {{ title }} {% endblock %}
+{% block title %}
+    
+    {% for elTitle in teachers %}
+        {{ elTitle.name }} 
+    {% endfor %}
+
+{% endblock %}
 
 {% block content %}
     <section id="teacher">
@@ -11,7 +16,7 @@
                 
                     <div class="teacher--header d-flex justify-content-start align-items-start">
                         <div class="teacher--img">
-                            <img src="media/{{ el.photo }}" alt="Тороев Асылбек Абакирович">
+                            <img src="../../media/{{ el.photo }}" alt="Преподаватель">
                         </div>
                         <div>
                             <h3 class="teacher--name">{{ el.name }}</h3>
@@ -25,7 +30,7 @@
                         </div>
                         <div class="teacher--right">
                             <ul>
-                                <li class="teacher--txt">Высшее, 1977, КГУ</li>
+                                <li class="teacher--txt">{{ el.edu }}</li>
                             </ul>
                         </div>
                     </div>
@@ -37,19 +42,7 @@
                         <div class="teacher--right">
                             <ul>
                                 <li class="teacher--txt teacher--txt-line-height">
-                                    С 1970 рабочий
-                                    <br/>
-                                    С 1977 – 1980 учитель физики и математики СШРМ г.Фрунзе
-                                    <br/>
-                                    С 1980-1984 – аспирант, ст. лаборант ИНФХ АН Кирг ССР
-                                    <br/>
-                                    С 1984- 1985 м.н.с. Институт Физики АН Кирг. ССР
-                                    <br/>
-                                    С 1986-1991 научн.сотр. ФПИ
-                                    <br/>
-                                    С 1997-2003 ст. преп. ТУ «Дастан
-                                    <br/>
-                                    С 2003 по настоящее время и.о. доц каф. кафедры «Информационные системы и технологии»
+                                   {{ el.experience }}
                                 </li>
                             </ul>
                         </div>
@@ -61,7 +54,7 @@
                         </div>
                         <div class="teacher--right">
                             <ul>
-                                <li class="teacher--txt">4</li>
+                                <li class="teacher--txt">{{ el.certificates }}</li>
                             </ul>
                         </div>
                     </div>
@@ -72,7 +65,7 @@
                         </div>
                         <div class="teacher--right">
                             <ul>
-                                <li class="teacher--txt">42 научные статьи, 18 методических указаний</li>
+                                <li class="teacher--txt">{{ el.publications }}</li>
                             </ul>
                         </div>
                     </div>
@@ -83,7 +76,7 @@
                         </div>
                         <div class="teacher--right">
                             <ul>
-                                <li class="teacher--txt">2017-19г. Разработка уч. планов и методич пособий в соответствии с требованиями цифровизации процессов и систем</li>
+                                <li class="teacher--txt">{{ el.works }}</li>
                             </ul>
                         </div>
                     </div>
@@ -94,7 +87,7 @@
                         </div>
                         <div class="teacher--right">
                             <ul>
-                                <li class="teacher--txt">Тел. 0312545641, init@ksucta.info</li>
+                                <li class="teacher--txt">{{ el.contacts }}</li>
                             </ul>
                         </div>
                     </div>
