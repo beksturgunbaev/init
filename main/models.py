@@ -14,6 +14,19 @@ class News(models.Model):
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
 
+class Achievements(models.Model):
+    title = models.TextField('Заголовок')
+    desc = models.TextField('Полное описание')
+    date = models.DateTimeField('Дата публикации')
+    image = models.ImageField('Добавить фото', null=True, blank=True, upload_to='achievements')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Наши достижения'
+        verbose_name_plural = 'Наши достижения'
+
 class Teacher(models.Model):
     photo = models.ImageField('Добавить фото', null=True, blank=True, upload_to='teachers')
     name = models.CharField('Ф.И.О', max_length=700, null=True, blank=True)

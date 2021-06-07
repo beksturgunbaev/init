@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import News, Contacts, Students, Teacher, Feed
+from .models import News, Contacts, Students, Teacher, Feed, Achievements
 from .forms import feedForm
 
 def index(request):
@@ -20,8 +20,25 @@ def index(request):
     contacts = Contacts.objects.order_by('-id')
     return render(request, 'main/index.html', {'form': form, 'title': 'Институт Новых Информационных Технологий', 'teacher': teacher, 'student': student, 'contacts': contacts})
 
+def achievements(request):
+    contacts = Contacts.objects.order_by('-id')
+    achievements = Achievements.objects.order_by('-id')
+    return render(request, 'main/achievements.html', {'headerTitle':'Наши достижения', 'achievements': achievements, 'contacts': contacts})
+
+def shedule(request):
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/shedule.html', {'headerTitle':'Расписания', 'contacts': contacts})
+
+def about(request):
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/about.html', {'headerTitle':'О кафедре', 'contacts': contacts})
+
+def aboutStudy(request):
+    contacts = Contacts.objects.order_by('-id')
+    return render(request, 'main/about-study.html', {'headerTitle':'Об учёбе', 'contacts': contacts})
+
 def news(request):
-    news = News.objects.order_by('-id')[:8]
+    news = News.objects.order_by('-id')
     contacts = Contacts.objects.order_by('-id')
     return render(request, 'main/news.html', {'headerTitle':'Последние новости', 'news': news, 'contacts': contacts})
 

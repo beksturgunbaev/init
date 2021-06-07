@@ -5,5 +5,9 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('poslednie-novosti', views.news, name='news'),
     path('novosti/<str:pk>/', views.newsDetail, name='newsDetail'),
+    path('nashi-dostizheniya', views.achievements, name='achievements'),
     path('sostav_kafedry/<str:pk>/', views.teachers, name='teachers'),
+    path('raspisaniya', views.shedule, name='shedule'),
+    path('o-kafedre', views.about, name='about'),
+    path('ob-uchebe', views.aboutStudy, name='aboutStudy'),
 ]

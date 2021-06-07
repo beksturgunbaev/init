@@ -152,6 +152,59 @@ h1,h2,h3,h4,h5,h6,p {
     font-size: 40px;
     cursor: pointer;
 }
+.more {
+    position: relative;
+}
+.more .more-modal {
+    position: absolute;
+    top: 150%;
+    left: -100%;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 10px 0 0;
+    -webkit-box-shadow: 0 0 5px #585555;
+    box-shadow: 0 0 7px #585555;
+    border: none;
+    width: 200px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.more-modal.show {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -ms-transform: translateY(0);
+           transform: translateY(0);
+}
+.more .more-modal a {
+    font-weight: 400;
+    color: rgb(66, 65, 65);
+    line-height: 10px;
+    padding: 20px 18px;
+    transition: .3s;
+}
+.more .more-modal a svg {
+    margin: 0 2px 2px 0;
+}
+.more .more-modal a:hover {
+    background: #cfe8f0;
+}
+.extra-menu {
+    display: none;
+}
 /* Главная страница */
 #header {
     height: 100vh;
@@ -190,7 +243,7 @@ h1,h2,h3,h4,h5,h6,p {
     text-decoration: underline;
 }
 .content {
-    padding-top: 180px;
+    padding-top: 160px;
 }
 .content--title {
     font-family: 'Circe-ExtraBold';
@@ -234,11 +287,17 @@ transition: .3s;
     display: none;
 }
 .content-img img {
-    width: 70%;
+    width: 40%;
+}
+.more-link {
+    cursor: pointer;
+}
+.more-link:hover {
+    text-decoration: none;
 }
 /* О кафедре */
 #about {
-    padding: 30px 0;
+    padding: 50px 0 30px;
 }
 .about--title {
     font-family: 'Circe-Bold';
@@ -323,7 +382,7 @@ table tbody tr td p {
     font-size: 16px;
     color: #000;
     line-height: 20px;
-    padding: 5px 0 2px;
+    padding: 10px 0 5px;
 }
 .info--txt {
     font-family: 'Circe-Light';
@@ -495,7 +554,7 @@ table tbody tr td p {
 }
 /* News */
 #news {
-    padding: 130px 0 30px;
+    padding: 100px 0 30px;
 }
 .news-block {
     margin-top: 30px;
@@ -579,4 +638,101 @@ table tbody tr td p {
     line-height: 27px;
     margin: 10px 0 20px;
     color: rgb(56, 56, 56);
+}
+#about-us,
+#about-study,
+#shedule,
+#achievements {
+    padding: 100px 0 20px;
+}
+/* Achievements */
+.achievements-block {
+    padding: 70px 0 0;
+}
+.achievements-box {
+    margin-bottom: 70px;
+}
+.achievements-box:nth-child(2n) .achiev-img {
+    order: 1;
+}
+.achievements-box:nth-child(2n) {
+    text-align: right;
+}
+.achievements-title {
+    font-family: 'Circe-Bold';
+    font-size: 27px;
+    line-height: 34px;
+    color: #222;
+    padding-bottom: 7px;
+    border-bottom: 2px solid green;
+}
+.achievements-desc {
+    font-family: 'Circe-Regular';
+    font-size: 18px;
+    line-height: 24px;
+    color: #383838;
+    padding: 7px 0;
+}
+.achievements-date {
+    font-family: 'Circe-Light';
+    text-align: right;
+    margin: 14px 0 0;
+    opacity: .7;
+}
+.achievements-icon {
+    margin: 0 10px 4px 0;
+}
+.achievements-img {
+    overflow: hidden;
+}
+.achievements-img img {
+    transition: .4s;
+    text-align: center;
+}
+.achievements-img:hover img {
+    transform: scale(1.05);
+}
+
+/* About us */
+#about-us .row {
+    padding-top: 30px;
+}
+.borderLeft {
+    border-left: 4px solid #0274c0;
+}
+.about-us-title {
+    font-family: 'Circe-ExtraBold';
+    font-size: 60px;
+    color: #3b3b3b;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+.about-us-desc {
+    font-family: 'Circe-Regular';
+    font-size: 21px;
+    line-height: 27px;
+    padding-top: 10px;
+}
+.detail-info {
+    font-family: 'Circe-Regular';
+    font-size: 18px;
+    line-height: 24px;
+    color: #333;
+    padding: 5px 0;
+}
+.detail-info:last-child {
+    padding-bottom: 20px;
+}
+.detail-info span {
+    padding-left: 20px;
+}
+.ab-title {
+    font-family: 'Circe-Bold';
+    font-size: 21px;
+    padding: 20px 0 10px;
+}
+.ab-desc {
+    font-family: 'Circe-Regular';
+    font-size: 18px;
+    padding: 7px 0;
 }

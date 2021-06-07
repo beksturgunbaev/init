@@ -1,22 +1,35 @@
 $(document).ready(function() {
 //   Burger menu:
-$('.burger-menu').click(function() {
-    $('.menu').addClass('active');
+var div = $(".menu");
+var menu = $('.burger-menu');
+var menuLink = $('.menu--item');
+
+menu.click(function() {
+    div.toggleClass('active');
 });
-$('.menu--item').click(function() {
-    $('.menu').removeClass('active');
+$('body').click(function(e) {
+    if(!menu.is(e.target) && !div.is(e.target)) {
+        div.removeClass('active');
+    }
+});
+menuLink.click(function() {
+    div.removeClass('active');
 });
 
-// Click вне элемента меню:
-    jQuery(function($){
-        $(document).mouseup(function (e) {
-            var div = $(".menu");
-            if (!div.is(e.target)
-                && div.has(e.target).length === 0) { 
-                div.removeClass('active');
-            }
-        });
-    });
+
+// Click button "more":
+var moreBtn = $('.more-link');
+var moreModal = $('.more-modal');
+
+moreBtn.click(function() {
+    moreModal.toggleClass("show");
+});
+$('body').click(function(e) {
+    if(!moreBtn.is(e.target) && !moreModal.is(e.target)) {
+        moreModal.removeClass("show");
+    }
+});
+
 
 //   Скролл при нажатии на меню:
     $('#about--menu').on("click", function(e){

@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} {{ headerTitle }} {% endblock %}
+
+{% block content %}
+    <section id="achievements">
+        <div class="container">
+            <h1 class="about--title d-flex align-items-center">
+                <svg class="achievements-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M28 26H4V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.0002 8L16.0002 18L12.0002 14L4.00024 22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.0002 13V8H21.0002" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Наши достижения
+                
+            </h3>
+            <div class="achievements-block">
+                {% for el in achievements %}
+                <div class="row achievements-box">
+                    <div class="col-lg-6 achiev-img">
+                        <div class="achievements-img">
+                            <img src="media/{{ el.image }}" alt="our achievements" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="achievements-txt">
+                            <h3 class="achievements-title">{{ el.title }}</h3>
+                            <p class="achievements-desc">{{ el.desc }}</p>
+                            <p class="achievements-date">
+                                Опубликовано: <span>{{ el.date }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
