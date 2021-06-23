@@ -33,9 +33,9 @@ def about(request):
     contacts = Contacts.objects.order_by('-id')
     return render(request, 'main/about.html', {'headerTitle':'О кафедре', 'contacts': contacts})
 
-def aboutStudy(request):
+def magistratura(request):
     contacts = Contacts.objects.order_by('-id')
-    return render(request, 'main/about-study.html', {'headerTitle':'Об учёбе', 'contacts': contacts})
+    return render(request, 'main/magistratura.html', {'headerTitle':'Об учёбе', 'contacts': contacts})
 
 def news(request):
     news = News.objects.order_by('-id')
@@ -45,7 +45,7 @@ def news(request):
 def newsDetail(request, pk):
     news = News.objects.filter(id=pk)
     contacts = Contacts.objects.order_by('-id')
-    return render(request, 'main/news-details.html', {'headerTitle':'Последние новости подробнее', 'news': news, 'contacts': contacts})
+    return render(request, 'main/news-details.html', {'headerTitle':'Подробнее о последних новостях', 'news': news, 'contacts': contacts})
     
 def teachers(request, pk):
     teachers = Teacher.objects.filter(id=pk)

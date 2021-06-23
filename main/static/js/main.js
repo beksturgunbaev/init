@@ -1,37 +1,37 @@
 $(document).ready(function() {
-//   Burger menu:
-var div = $(".menu");
-var menu = $('.burger-menu');
-var menuLink = $('.menu--item');
+    //   Burger menu:
+    var div = $(".menu");
+    var menu = $('.burger-menu');
+    var menuLink = $('.menu--item');
 
-menu.click(function() {
-    div.toggleClass('active');
-});
-$('body').click(function(e) {
-    if(!menu.is(e.target) && !div.is(e.target)) {
+    menu.click(function() {
+        div.toggleClass('active');
+    });
+    $('body').click(function(e) {
+        if(!menu.is(e.target) && !div.is(e.target)) {
+            div.removeClass('active');
+        }
+    });
+    menuLink.click(function() {
         div.removeClass('active');
-    }
-});
-menuLink.click(function() {
-    div.removeClass('active');
-});
+    });
 
 
-// Click button "more":
-var moreBtn = $('.more-link');
-var moreModal = $('.more-modal');
+    // Click button "more":
+    var moreBtn = $('.more-link');
+    var moreModal = $('.more-modal');
 
-moreBtn.click(function() {
-    moreModal.toggleClass("show");
-});
-$('body').click(function(e) {
-    if(!moreBtn.is(e.target) && !moreModal.is(e.target)) {
-        moreModal.removeClass("show");
-    }
-});
+    moreBtn.click(function() {
+        moreModal.toggleClass("show");
+    });
+    $('body').click(function(e) {
+        if(!moreBtn.is(e.target) && !moreModal.is(e.target)) {
+            moreModal.removeClass("show");
+        }
+    });
 
 
-//   Скролл при нажатии на меню:
+    //   Скролл при нажатии на меню:
     $('#about--menu').on("click", function(e){
         e.preventDefault();
             var top = $("#about").offset().top - 83;
@@ -60,7 +60,7 @@ $('body').click(function(e) {
             scrollTop: top
         }, 700);
     });
-//  При нажатии на кнопку "Получить консультацию":
+    //  При нажатии на кнопку "Получить консультацию":
     $('.get--info--btn').click(function() {
         $('.modal--form').addClass('active');
         $('body').css('overflow', 'hidden');
@@ -70,7 +70,7 @@ $('body').click(function(e) {
         $('body').css('overflow', 'auto');
     });
 
-// Наши выпускники (слайдер):
+    // Наши выпускники (слайдер):
     $(".students--container").slick({
         infinite: true,
         dots: true,

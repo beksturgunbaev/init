@@ -200,7 +200,7 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 0 2px 2px 0;
 }
 .more .more-modal a:hover {
-    background: #cfe8f0;
+    background: #d9eff7;
 }
 .extra-menu {
     display: none;
@@ -241,6 +241,51 @@ h1,h2,h3,h4,h5,h6,p {
 .menu--item__link:hover {
     color: #fff;
     text-decoration: underline;
+}
+#abiturients--menu {
+    position: relative;
+}
+#abiturients--menu:hover .menu--modal {
+    opacity: 1;
+    visibility: visible;
+}
+.menu--modal {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 0 0 5px #585555;
+    box-shadow: 0 0 7px #585555;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.menu--modal a {
+    font-family: 'Circe-Regular';
+    color: #000;
+    width: 100%;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    padding: 12px 40px 12px 20px;
+}
+.menu--modal a:hover {
+    background: #d9eff7;
 }
 .content {
     padding-top: 160px;

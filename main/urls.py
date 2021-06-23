@@ -9,5 +9,5 @@ urlpatterns = [
     path('sostav_kafedry/<str:pk>/', views.teachers, name='teachers'),
     path('raspisaniya', views.shedule, name='shedule'),
     path('o-kafedre', views.about, name='about'),
-    path('ob-uchebe', views.aboutStudy, name='aboutStudy'),
+    path('magistratura', views.magistratura, name='Magistratura'),
 ]

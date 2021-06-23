@@ -5,7 +5,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
@@ -17,100 +18,124 @@
     <meta description="Основное направление кафедры – подготовка IT-специалистов-программистов и экспертов-аналитиков,
                     владеющих современными методами программирования и обработки данных информационных и
                     инфокоммуникационных
-                    технологий." >
+                    технологий.">
 </head>
 
 <body>
 
-<div class="full-page">~
+    <div class="full-page">~
 
-    {% block particles %}{% endblock %}
+        {% block particles %}{% endblock %}
 
-    {% block modal %}{% endblock %}
+        {% block modal %}{% endblock %}
 
-    <div class="header--container">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a class="logo--cont d-flex justify-content-start align-items-center" href="{% url 'home' %}">
-                    <img src="{% static 'img/main-logo.png' %}" alt="Logo">
-                    <span>Кыргызский Государтвенный Университет Строительства, Транспорта и Архитектуры
-                        им.Н.Исанова</span>
-                </a>
-            </div>
-            <div class="menu">
-                <a class="menu-logo" href="{% url 'home' %}">
-                    <img class="img-fluid" src="{% static 'img/main-logo.png' %}" alt="Logo">
-                </a>
-                <ul class="menu-cont d-flex justify-content-between align-items-center">
-                    <li class="menu--item">
-                        <a class="menu--item__link" href="{% url 'aboutStudy' %}">Абитуриенты</a>
-                    </li>
-                    <li class="menu--item">
-                        <a class="menu--item__link" id="teachers-link" href="#">Состав кафедры</a>
-                    </li>
-                    <li class="menu--item">
-                        <a class="menu--item__link" id="students--menu" href="#">Наши выпускники</a>
-                    </li>
-                    <li class="menu--item">
-                        <a class="menu--item__link" href="{% url 'news' %}">Новости</a>
-                    </li>
-                    <li class="menu--item">
-                        <a class="menu--item__link" id="contacts--menu" href="#">Контакты</a>
-                    </li>
-                    <li class="menu--item extra-menu">
-                        <a class="menu--item__link" target="_blank" href="{% url 'about' %}">О кафедре</a>
-                    </li>
-                    <li class="menu--item extra-menu">
-                        <a class="menu--item__link" target="_blank" href="{% url 'shedule' %}">Расписания</a>
-                    </li>
-                    <li class="menu--item extra-menu">
-                        <a class="menu--item__link" target="_blank" href="{% url 'news' %}">Наши достижения</a>
-                    </li>
-                    <li class="menu--item more">
-                        <span class="menu--item__link more-link">ещё...</span>
-                        <span class="more-modal">
-                            <a href="{% url 'about' %}" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" fill="none">
-                                    <path d="M1 12L16 4L31 12L16 20L1 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M23.5 30V16L16 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M27.5 13.8667V20.6818C27.5004 20.8975 27.4307 21.1075 27.3013 21.2802C26.4592 22.4007 22.9066 26.5 16 26.5C9.09339 26.5 5.54077 22.4007 4.69869 21.2802C4.56932 21.1075 4.49959 20.8975 4.5 20.6818V13.8667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                О кафедре</a>
-                            <a href="{% url 'shedule' %}" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" fill="none">
-                                    <path d="M12 12H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 16H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 20H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M19.5858 27H6C5.73478 27 5.48043 26.8946 5.29289 26.7071C5.10536 26.5196 5 26.2652 5 26V6C5 5.73478 5.10536 5.48043 5.29289 5.29289C5.48043 5.10536 5.73478 5 6 5H26C26.2652 5 26.5196 5.10536 26.7071 5.29289C26.8946 5.48043 27 5.73478 27 6V19.5858C27 19.7171 26.9741 19.8471 26.9239 19.9685C26.8736 20.0898 26.8 20.2 26.7071 20.2929L20.2929 26.7071C20.2 26.8 20.0898 26.8736 19.9685 26.9239C19.8471 26.9741 19.7171 27 19.5858 27V27Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M26.9095 19.999H20V26.909" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Расписания</a>
-                            <a href="{% url 'achievements' %}" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" fill="none">
-                                    <path d="M28 26H4V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M26.0002 8L16.0002 18L12.0002 14L4.00024 22" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M26.0002 13V8H21.0002" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                Наши достижения</a>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-            <div class="burger-menu">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
+        <div class="header--container">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <a class="logo--cont d-flex justify-content-start align-items-center" href="{% url 'home' %}">
+                        <img src="{% static 'img/main-logo.png' %}" alt="Logo">
+                        <span>Кыргызский Государтвенный Университет Строительства, Транспорта и Архитектуры
+                            им.Н.Исанова</span>
+                    </a>
+                </div>
+                <div class="menu">
+                    <a class="menu-logo" href="{% url 'home' %}">
+                        <img class="img-fluid" src="{% static 'img/main-logo.png' %}" alt="Logo">
+                    </a>
+                    <ul class="menu-cont d-flex justify-content-between align-items-center">
+                        <li class="menu--item" id="abiturients--menu">
+                            <a class="menu--item__link" href="#">Абитуриентам</a>
+                            <span class="menu--modal">
+                                <a href="#">Бакалавриат</a>
+                                <a href="{% url 'Magistratura' %}" target="_blank">Магистратура</a>
+                                <a href="#">Аспирантура</a>
+                                <a href="#">Докторантура</a>
+                            </span>
+                        </li>
+                        <li class="menu--item">
+                            <a class="menu--item__link" id="teachers-link" href="#">Состав кафедры</a>
+                        </li>
+                        <li class="menu--item">
+                            <a class="menu--item__link" id="students--menu" href="#">Наши выпускники</a>
+                        </li>
+                        <li class="menu--item">
+                            <a class="menu--item__link" href="{% url 'news' %}">Новости</a>
+                        </li>
+                        <li class="menu--item">
+                            <a class="menu--item__link" id="contacts--menu" href="#">Контакты</a>
+                        </li>
+                        <li class="menu--item extra-menu">
+                            <a class="menu--item__link" target="_blank" href="{% url 'about' %}">О кафедре</a>
+                        </li>
+                        <li class="menu--item extra-menu">
+                            <a class="menu--item__link" target="_blank" href="{% url 'shedule' %}">Расписания</a>
+                        </li>
+                        <li class="menu--item extra-menu">
+                            <a class="menu--item__link" target="_blank" href="{% url 'news' %}">Наши достижения</a>
+                        </li>
+                        <li class="menu--item more">
+                            <span class="menu--item__link more-link">ещё...</span>
+                            <span class="more-modal">
+                                <a href="{% url 'about' %}" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path d="M1 12L16 4L31 12L16 20L1 12Z" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.5 30V16L16 12" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M27.5 13.8667V20.6818C27.5004 20.8975 27.4307 21.1075 27.3013 21.2802C26.4592 22.4007 22.9066 26.5 16 26.5C9.09339 26.5 5.54077 22.4007 4.69869 21.2802C4.56932 21.1075 4.49959 20.8975 4.5 20.6818V13.8667"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    О кафедре</a>
+                                <a href="{% url 'shedule' %}" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path d="M12 12H20" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 16H20" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20H16" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M19.5858 27H6C5.73478 27 5.48043 26.8946 5.29289 26.7071C5.10536 26.5196 5 26.2652 5 26V6C5 5.73478 5.10536 5.48043 5.29289 5.29289C5.48043 5.10536 5.73478 5 6 5H26C26.2652 5 26.5196 5.10536 26.7071 5.29289C26.8946 5.48043 27 5.73478 27 6V19.5858C27 19.7171 26.9741 19.8471 26.9239 19.9685C26.8736 20.0898 26.8 20.2 26.7071 20.2929L20.2929 26.7071C20.2 26.8 20.0898 26.8736 19.9685 26.9239C19.8471 26.9741 19.7171 27 19.5858 27V27Z"
+                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M26.9095 19.999H20V26.909" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Расписания</a>
+                                <a href="{% url 'achievements' %}" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32"
+                                        fill="none">
+                                        <path d="M28 26H4V6" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M26.0002 8L16.0002 18L12.0002 14L4.00024 22" stroke="black"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M26.0002 13V8H21.0002" stroke="black" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    Наши достижения</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="burger-menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
             </div>
         </div>
-    </div>
 
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-    <section id="contacts">
-        <div class="container">
-            <h1 class="about--title">Контакты</h1>
-            <div class="row contact--container">
-                {% for contacts in contacts %}
+        <section id="contacts">
+            <div class="container">
+                <h1 class="about--title">Контакты</h1>
+                <div class="row contact--container">
+                    {% for contacts in contacts %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6 contact--block">
                         <div class="contact--info">
                             <div class="contact--img">
@@ -146,33 +171,36 @@
                                 <img class="img-fluid date--img" src="{% static 'img/time.png' %}" alt="">
                             </div>
                             <div class="contact--title">Часы работы</div>
-                            <p class="contact--txt">ПН-ПТ (08:00 - 18-00)<br/>СБ-ВС (выходные)</p>
+                            <p class="contact--txt">ПН-ПТ (08:00 - 18-00)<br />СБ-ВС (выходные)</p>
                         </div>
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.5146861385683!2d74.59848491510535!3d42.840864379157566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb622750cd779%3A0x54ddea8bdc4fe9ff!2s34%20Abdylas%20Maldybaev%20St%2C%20Bishkek!5e0!3m2!1sen!2skg!4v1612389607617!5m2!1sen!2skg" width="" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-        <div class="last--footer text-center">
-            <div class="soc--links--txt">Мы в социальных сетях:</div>
-            <div class="soc--links d-flex align-items-center justify-content-center">
-                <a href="#">
-                    <img src="{% static 'img/twitter.png' %}" class="img-fluid" alt="">
-                </a>
-                <a href="#">
-                    <img src="{% static 'img/instagram.png' %}" class="img-fluid" alt="">
-                </a>
-                <a href="#">
-                    <img src="{% static 'img/facebook.png' %}" class="img-fluid" alt="">
-                </a>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.5146861385683!2d74.59848491510535!3d42.840864379157566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb622750cd779%3A0x54ddea8bdc4fe9ff!2s34%20Abdylas%20Maldybaev%20St%2C%20Bishkek!5e0!3m2!1sen!2skg!4v1612389607617!5m2!1sen!2skg"
+                    width="" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
             </div>
-            <p class="copyright">Copyright © 2021 ksucta.kg</p>
-        </div>
-    </section>
+            <div class="last--footer text-center">
+                <div class="soc--links--txt">Мы в социальных сетях:</div>
+                <div class="soc--links d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <img src="{% static 'img/twitter.png' %}" class="img-fluid" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'img/instagram.png' %}" class="img-fluid" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'img/facebook.png' %}" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <p class="copyright">Copyright © 2021 ksucta.kg</p>
+            </div>
+        </section>
 
-</div>
+    </div>
 
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/slick.min.js' %}"></script>
