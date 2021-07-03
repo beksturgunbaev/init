@@ -10,4 +10,5 @@ urlpatterns = [
     path('raspisaniya', views.shedule, name='shedule'),
     path('o-kafedre', views.about, name='about'),
     path('magistratura', views.magistratura, name='Magistratura'),
+    path('nomenklatura-del', views.nomenklatura, name='nomenklatura'),
 ]

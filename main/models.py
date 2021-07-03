@@ -81,7 +81,16 @@ class Feed(models.Model):
         return self.feedName
 
     class Meta:
-        verbose_name = 'Заявка на обратный звонок'
-        verbose_name_plural = 'Заявки на обратный звонок'
+        verbose_name = 'Заявка обратной связи'
+        verbose_name_plural = 'Заявки обратной связи'
 
-        
+class Nomenklatura(models.Model):
+    fileName = models.CharField('Название файла', max_length=2000, null=True, blank=True)
+    document = models.FileField('Добавить файл', null=True, blank=True, upload_to='documents/')
+
+    def __str__(self):
+        return self.fileName
+
+    class Meta:
+        verbose_name = 'Номенклатура дел'
+        verbose_name_plural = 'Номенклатура дел'

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import News, Contacts, Students, Teacher, Feed, Achievements
+from .models import News, Contacts, Students, Teacher, Feed, Achievements, Nomenklatura
 from .forms import feedForm
 
 def index(request):
@@ -52,4 +52,7 @@ def teachers(request, pk):
     contacts = Contacts.objects.order_by('-id')
     return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers, 'contacts': contacts})
 
-
+def nomenklatura(request):
+    contacts = Contacts.objects.order_by('-id')
+    nomenklatura = Nomenklatura.objects.order_by('-id')
+    return render(request, 'main/nomenklatura.html', {'headerTitle':'Номенклатура дел', 'nomenklatura': nomenklatura, 'contacts': contacts})
