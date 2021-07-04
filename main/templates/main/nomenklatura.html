@@ -11,7 +11,7 @@
             </h1>
             <div class="nom-container">
                 {% for doc in nomenklatura %}
-                <a target="_blank" href="#" class="nom-block">
+                <a target="_blank" href="media/{{ doc.document }}" class="nom-block">
                     <img class="nom-img" src="http://s1.iconbird.com/ico/2013/10/464/w512h5121380984756folder.png" alt="">
                     <div class="nom-text">
                         {{ doc.fileName }}

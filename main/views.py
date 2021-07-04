@@ -53,6 +53,6 @@ def teachers(request, pk):
     return render(request, 'main/teachers.html', {'title': 'Тороев Асылбек Абакирович', 'teachers': teachers, 'contacts': contacts})
 
 def nomenklatura(request):
-    contacts = Contacts.objects.order_by('-id')
     nomenklatura = Nomenklatura.objects.order_by('-id')
+    contacts = Contacts.objects.order_by('-id')
     return render(request, 'main/nomenklatura.html', {'headerTitle':'Номенклатура дел', 'nomenklatura': nomenklatura, 'contacts': contacts})

@@ -171,8 +171,19 @@
     .achievements-title {
         padding-top: 14px;
     }
+    .about-us-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .borderLeft {
+        border-left: 2px solid #0274c0;
+    }
 }
 @media screen and (max-width: 576px) {
+    .about-us-desc {
+        font-size: 16px;
+        line-height: 21px;
+    }
     .modal--content {
         width: 400px;
         height: 430px;
