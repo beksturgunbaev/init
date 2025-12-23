@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source:*)",
+      "Bash(pip3 list:*)",
+      "Bash(python3 manage.py showmigrations:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 manage.py:*)",
+      "Bash(cat:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
